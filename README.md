@@ -1,8 +1,15 @@
-# ⚠️ Deprecated - This repository is no longer maintained
+# Disclaimer and Why
 
-Please use [react-intl.macro](https://github.com/evenchange4/react-intl.macro) or [react-app-rewired](https://github.com/timarney/react-app-rewired) solution.
+The original package has been deprecated by his author.
 
-# react-intl-cra
+The main reason to fork and returning back to life is because at work we've devided to porting our js-based projects to TypeScript. The author suggests to change to another library, perhaps in a future, but for now we're more focused on evolving our tool stack, no time for changing paradigms. We found easier to update the lib and include the TypeScript support.
+
+So now you're aware why, don't expect nothing too fancy. It is just the same behaviour updated to babel 7.
+Also, it talks now in TypeScript.
+
+Please, refer to the [original repository](https://github.com/evenchange4/react-intl.macro) if you want to know suggested alternatives.
+
+# typescript-intl-cra
 
 > Extract messages of `Creact React App` from the command line.
 
@@ -19,7 +26,7 @@ This is just a workaround for [create-react-app #1227](https://github.com/facebo
 ## Installation
 
 ```sh
-$ yarn add react-intl-cra --dev
+$ yarn add typescript-intl-cra --dev
 ```
 
 ## Demo
@@ -27,7 +34,7 @@ $ yarn add react-intl-cra --dev
 Standalone example based on Create-React-App: https://github.com/evenchange4/react-intl-po-example
 
 ```json
-$ react-intl-cra './src/**/*.js' -o messages.json
+$ typescript-intl-cra './src/**/*.js' -o messages.json
 ```
 
 Output:
@@ -54,9 +61,9 @@ Output:
 ### API
 
 ```sh
-$ react-intl-cra --help
+$ typescript-intl-cra --help
 
-Usage: react-intl-cra <pattern> [options]
+Usage: typescript-intl-cra <pattern> [options]
 
 <pattern> Glob pattern to specify files.
           Needs to be surrounded with quotes to prevent shell globbing.
@@ -73,13 +80,13 @@ Examples:
   react-intl-cra 'src/**/*.js' -o message.json  Output into a single file.
 
 
-For more information go to https://github.com/evenchange4/react-intl-cra
+For more information go to https://github.com/emoriarty/typescript-intl-cra
 ```
 
 ## NPM Usage
 
 ```js
-import extract from 'react-intl-cra';
+import extract from 'typescript-intl-cra';
 
 const result = extract('./src/**/*.js');
 ```

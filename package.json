@@ -1,15 +1,15 @@
 {
-  "name": "react-intl-cra",
+  "name": "typescript-intl-cra",
   "version": "0.3.4",
-  "description": "Extract messages of `Creact React App` from the command line",
-  "repository": "https://github.com/evenchange4/react-intl-cra",
+  "description":
+    "Extract messages of `Creact React App` from the command line. Also understands TypeScript",
+  "repository": "https://github.com/emoriarty/typescript-intl-cra",
   "author": "Michael Hsu <evenchange4@gmail.com>",
+  "contributors": ["Enrique Arias <enrique.arias.cervero@gmail.com>"],
   "license": "MIT",
-  "files": [
-    "src",
-    "bin"
-  ],
+  "files": ["src", "bin"],
   "main": "src/index.js",
+  "types": "src/index.d.ts",
   "bin": {
     "react-intl-cra": "bin/index.js"
   },
@@ -17,20 +17,23 @@
     "test": "NODE_ENV='test' jest --coverage --runInBand",
     "test:watch": "npm run test -- --watch",
     "eslint": "eslint ./",
-    "format": "prettier --write 'src/**/*.{js,json}' 'bin/**/*.{js,json}' 'tests/**/*.{js,json}' '*.md'",
+    "format":
+      "prettier --write 'src/**/*.{js,json}' 'bin/**/*.{js,json}' 'tests/**/*.{js,json}' '*.md'",
     "flow": "flow",
     "flow-coverage": "flow-coverage-report",
     "precommit": "lint-staged",
-    "changelog": "github-changes -o evenchange4 -r react-intl-cra -b master -f ./CHANGELOG.md --order-semver --use-commit-body"
+    "changelog":
+      "github-changes -o emoriarty -r typescript-intl-cra -b master -f ./CHANGELOG.md --order-semver --use-commit-body"
   },
   "dependencies": {
-    "babel-core": "^6.26.0",
-    "babel-plugin-react-intl": "^2.4.0",
-    "babel-preset-react-app": "^3.1.1",
-    "chalk": "^2.3.0",
-    "glob": "^7.1.2",
-    "ramda": "^0.25.0",
-    "yargs": "^11.0.0"
+    "@babel/core": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "@babel/preset-typescript": "^7.7.7",
+    "babel-plugin-react-intl": "^5.1.11",
+    "chalk": "^3.0.0",
+    "glob": "^7.1.6",
+    "ramda": "^0.26.1",
+    "yargs": "^15.0.2"
   },
   "devDependencies": {
     "babel-eslint": "8.2.1",
@@ -51,21 +54,12 @@
     "prettier": "1.10.2"
   },
   "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx}"
-    ],
-    "testPathIgnorePatterns": [
-      "<rootDir>/node_modules/"
-    ]
+    "collectCoverageFrom": ["src/**/*.{js,jsx}"],
+    "testPathIgnorePatterns": ["<rootDir>/node_modules/"]
   },
   "flow-coverage-report": {
-    "excludeGlob": [
-      "node_modules/**"
-    ],
-    "includeGlob": [
-      "src/**/*.js",
-      "bin/**/*.js"
-    ],
+    "excludeGlob": ["node_modules/**"],
+    "includeGlob": ["src/**/*.js", "bin/**/*.js"],
     "threshold": 90,
     "type": "text"
   },
@@ -74,10 +68,7 @@
     "singleQuote": true
   },
   "lint-staged": {
-    "*.{js,json,md}": [
-      "prettier --write",
-      "git add"
-    ]
+    "*.{js,json,md}": ["prettier --write", "git add"]
   },
   "eslintConfig": {
     "parser": "babel-eslint",
@@ -87,10 +78,7 @@
       "prettier/flowtype",
       "plugin:jest/recommended"
     ],
-    "plugins": [
-      "prettier",
-      "jest"
-    ],
+    "plugins": ["prettier", "jest"],
     "env": {
       "jest/globals": true
     },

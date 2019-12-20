@@ -38,7 +38,10 @@ exports[`should extract with one file 2`] = `
 exports[`should extract with source pattern 1`] = `
 Array [
   Object {
-    "defaultMessage": "Hello {name}, you have {unreadCount, number} {unreadCount, plural, one {message} other {messages}}",
+    "defaultMessage": "Hello {name}, you have {unreadCount, number} {unreadCount, plural,
+              one {message}
+              other {messages}
+            }",
     "description": undefined,
     "filepath": "./tests/cra-project/src/App.js",
     "id": "App.message",
@@ -62,7 +65,7 @@ exports[`should extract with source pattern 2`] = `
 "[
   {
     \\"id\\": \\"App.message\\",
-    \\"defaultMessage\\": \\"Hello {name}, you have {unreadCount, number} {unreadCount, plural, one {message} other {messages}}\\",
+    \\"defaultMessage\\": \\"Hello {name}, you have {unreadCount, number} {unreadCount, plural,\\\\n              one {message}\\\\n              other {messages}\\\\n            }\\",
     \\"filepath\\": \\"./tests/cra-project/src/App.js\\"
   },
   {
@@ -108,6 +111,5 @@ Examples:
   -b transform-function-bind
 
 For more information go to https://github.com/evenchange4/react-intl-cra
-
 "
 `;
