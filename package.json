@@ -1,6 +1,6 @@
 {
   "name": "typescript-intl-cra",
-  "version": "0.3.4",
+  "version": "0.4.0",
   "description":
     "Extract messages of `Creact React App` from the command line. Also understands TypeScript",
   "repository": "https://github.com/emoriarty/typescript-intl-cra",
@@ -11,7 +11,7 @@
   "main": "src/index.js",
   "types": "src/index.d.ts",
   "bin": {
-    "react-intl-cra": "bin/index.js"
+    "typescript-intl-cra": "bin/index.js"
   },
   "scripts": {
     "test": "NODE_ENV='test' jest --coverage --runInBand",

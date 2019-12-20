@@ -1,6 +1,9 @@
 ## Change Log
 
-### v0.4.0 (2019/01/28 17:02 +00:00)
+### upcoming (2019/12/20 17:13 +00:00)
+
+* [3c740d7](https://github.com/emoriarty/typescript-intl-cra/commit/3c740d7e6d130ee9699ca37fb2895b65fcf23065) 0.4.0 (@emoriarty)
+* [8dd51fa](https://github.com/emoriarty/typescript-intl-cra/commit/8dd51fa235960003d7e1ec30dd95b4e6875ea5ba) TypeScript and Babel 7 support (@emoriarty)
 
 ### v0.3.4 (2019/01/28 08:22 +00:00)
 
