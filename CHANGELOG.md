@@ -1,8 +1,14 @@
 ## Change Log
 
-### v0.4.1 (2019/12/20 17:27 +00:00)
+### upcoming (2019/12/21 07:04 +00:00)
 
-* [00a1860](https://github.com/emoriarty/typescript-intl-cra/commit/00a18606698c61d007c3132bd22354645ca776a0) 0.4.1 (@emoriarty)
+* [b703a76](https://github.com/emoriarty/typescript-intl-cra/commit/b703a76634ae5daa6315d3f273e241a5aae08c16) travis support (@emoriarty)
+* [a658510](https://github.com/emoriarty/typescript-intl-cra/commit/a658510aa72b18edc8db02727b3f9149839bc121) (doc) Updated cli refs (@emoriarty)
+* [03320a6](https://github.com/emoriarty/typescript-intl-cra/commit/03320a67bbb15d965d81059ed0a087b5322e47e0) (doc) Updated cli refs (@emoriarty)
+
+### v0.4.1 (2019/12/21 04:11 +00:00)
+
+* [51b4c4c](https://github.com/emoriarty/typescript-intl-cra/commit/51b4c4c83d687b1a22210c2b97cf84e60fcb410e) 0.4.1 - renamed binary reference (@emoriarty)
 
 ### v0.4.0 (2019/12/20 17:24 +00:00)
 
