@@ -1,8 +1,9 @@
 ## Change Log
 
-### upcoming (2019/12/21 07:04 +00:00)
+### v0.4.2 (2019/12/21 08:30 +00:00)
 
-* [b703a76](https://github.com/emoriarty/typescript-intl-cra/commit/b703a76634ae5daa6315d3f273e241a5aae08c16) travis support (@emoriarty)
+* [5a499d6](https://github.com/emoriarty/typescript-intl-cra/commit/5a499d630a2169943e019d98a50245e70e0ead5e) chore(plugins) babel-plugin- prefix removed (@emoriarty)
+* [5859d22](https://github.com/emoriarty/typescript-intl-cra/commit/5859d22e054a96ca939da6d5ef5e4518c288f019) (ci) travis support (@emoriarty)
 * [a658510](https://github.com/emoriarty/typescript-intl-cra/commit/a658510aa72b18edc8db02727b3f9149839bc121) (doc) Updated cli refs (@emoriarty)
 * [03320a6](https://github.com/emoriarty/typescript-intl-cra/commit/03320a67bbb15d965d81059ed0a087b5322e47e0) (doc) Updated cli refs (@emoriarty)
 
