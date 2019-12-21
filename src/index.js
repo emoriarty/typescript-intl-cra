@@ -14,9 +14,7 @@ function extract(
   const relativeSrcPaths = glob.sync(pattern);
   const contents = srcPaths.map(p => fs.readFileSync(p, 'utf-8'));
   const filesAndContents = R.zip(srcPaths, contents);
-  const reqBabelPlugins = babelPlugins.map(b =>
-    require.resolve(`babel-plugin-${b}`)
-  );
+  const reqBabelPlugins = babelPlugins.map(b => require.resolve(b));
   const messages = filesAndContents
     .map(fileAndContent => {
       const file = fileAndContent[0];
