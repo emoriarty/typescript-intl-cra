@@ -1,44 +1,38 @@
 sudo: false
 language: node_js
 node_js:
-  - 9
+- 12.8.0
 env:
   global:
-    - YARN_VERSION=1.3.2
-
+  - YARN_VERSION=1.19.2
 before_install:
-  - export PATH="$HOME/.yarn/bin:$PATH"
-  - |
-    if [[ ! -e ~/.yarn/bin/yarn || $(yarn --version) != "${YARN_VERSION}" ]]; then
-      curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version $YARN_VERSION
-    fi
-
+- export PATH="$HOME/.yarn/bin:$PATH"
+- |
+  if [[ ! -e ~/.yarn/bin/yarn || $(yarn --version) != "${YARN_VERSION}" ]]; then
+    curl -o- -L https://yarnpkg.com/install.sh | bash -s -- --version $YARN_VERSION
+  fi
 install:
-  - yarn install --pure-lockfile
-
+- yarn install --pure-lockfile
 script:
-  - yarn run eslint
-  - yarn run test
-  - yarn run flow
-
+- yarn run eslint
+- yarn run test
+- yarn run flow
 after_success:
-  - ./node_modules/.bin/codecov
-
+- "./node_modules/.bin/codecov"
 deploy:
+  matrix:
   - provider: npm
-    email: evenchange4@gmail.com
+    email: enrique.arias.cervero@gmail.com
     api_key:
-      secure: rHQESJnwDy17+Od+o0GTH6G2KnnDJK6ppAJAvr4w5no0/yM/LC1m65CL+8hpCHoj0uZrgyU4fqcGXgrq5P2aMY39qPx2slsWWBOStbFgZsGNNSd5som1xs/zAEJg6a/j9qrK5m6gOR8xC5TUJHwyKfBfWD/F72zXNBbsAbgHKuSMSoRMmIsTV/JxMDc3S/sHd3KToj0gSx/15z6btEtAjeQihQeSgzPqtEXfLUo9TyrYawsvL8p+62wS7yeaglGklNZqWuEbc3u8IvLlhd4wVlQGbahJDTh6lTfA0Xa+56uuvS34vo5i2jeCbN5StROjOmepcm5Gb7xr7GfRllvyx0TmbdSmTeYkVHywyHSvpcRLUg2uefLIma0QZoOY9bneNmlE+x19dxMtm8YSQD6qfo/XL8r6vvO0tTJ5Jq2PbqJ3L/fXzPR9XzDREELGB3Od4tToZrpDYIkQCAJlsGTYn1r788uXmSYmGCn2XLy1PkPB0vP2eg9SF2kIZYz3LUJgjoFktNgf/h3lRatQY4wws09nN7wVQwUnOsqObxvGnr2Vl2lHQbT0+Z1a3KQ7Zj1VvQvoJgE7CRKiKau9hfVE7LVVDZPvcjR4TPT3t/gXUKybYVXlmS42PRCW/815yPUZRMEqWUiqqo/K4hP3x/fwkfY6K+J+XS/cRAAwA1bGn38=
+      secure: Zxq9fKmUym+9QoVjmIJodlyDcTKm6/gs2P16eBwI22ysjFIXL15KeOFW4sVUSKTERNRBec3T6kMPMECiBcDupUqzNzEmE/RMoiTvPQskPSy0348nkloz6trjMg2aSECG0eCJlvbigt/NYX7pI9dV6yzO/h7nnCmKL/0LV3eSnkZpITWBOBJHHW7MX+vqied6iUX61bGkEoS1r8JthIdCocglqKMUBUNBW51e6TxDnfj/FMeJV2aJ65Pe95iPSHS16JJZZ9AwrGfDbYA2fLlhfKzejmdo6nVP98REO26nggkhp9bzgjbBU5suzxKToOCAqntQfphgZZfaErOwqpDCzqKK2QzMTUMUCrjyZDxQ2+wWoWpGASnAUqZVOmZkv4tVslE+MqqneMnXAL6IrjcuVxUGffw1CiwGnyutPz1kHGIsNS6L79duOibMx+tJKY111xskEKvQMFwRCaI9tCHBjZip36jYchAu4m0mEVf6VDYKMFiYcGUcAQDC3fSkr6607FOjsfCOPhGY+UbBnRKnrOETEfaS+8+Oa3G6avhQSVCdtEngSRjfYEEoGndgEPI2bo2yoQTlKOihLP20KqVnl8w98eBcEXkGVL7MhrPprLq/0RUXY+hvuKoFwYiD+4QIoIxJdg77xUYQVfR7BSzyUANdvFs3l8+2gI/mKDUxjEM=
     skip_cleanup: true
     on:
       tags: true
-      repo: evenchange4/react-intl-cra
-
+      repo: emoriarty/typescript-intl-cra
 cache:
   yarn: true
   directories:
-    - "~/.yarn"
-    - node_modules
-
+  - "~/.yarn"
+  - node_modules
 notifications:
-  email: evenchange4@gmail.com
+  email: enrique.arias.cervero@gmail.com

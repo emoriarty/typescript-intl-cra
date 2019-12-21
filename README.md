@@ -1,13 +1,12 @@
-# Disclaimer and Why
+# Why
 
-The original package has been deprecated by his author.
+The main reason to give back life again to this tool is that at work we make pretty good use in for extracting and storing translation messages. After according to port our projects to TypeScript, we've realized that `react-int-cra` did not support the TypeScript syntax. Even the available options offered the possibility to add babel plugins, it did not work with the last versions of babel either. Of course, the project had been deprecated.
 
-The main reason to fork and returning back to life is because at work we've devided to porting our js-based projects to TypeScript. The author suggests to change to another library, perhaps in a future, but for now we're more focused on evolving our tool stack, no time for changing paradigms. We found easier to update the lib and include the TypeScript support.
+The author suggests to change to another library, but for now, we're more focused on evolving our product. No time for changing models in the toolchain. So after observing how the library works, we found easier to update it and include the TypeScript support than using a new instrument.
 
-So now you're aware why, don't expect nothing too fancy. It is just the same behaviour updated to babel 7.
-Also, it talks now in TypeScript.
+So now you're aware why don't expect nothing too fancy. It is just the same old fashion behavior updated to babel 7. And TypeScript support.
 
-Please, refer to the [original repository](https://github.com/evenchange4/react-intl.macro) if you want to know suggested alternatives.
+Please, refer to the [original repository](https://github.com/evenchange4/react-intl-cra#%EF%B8%8F-deprecated---this-repository-is-no-longer-maintained) if you want to know more about suggested alternatives.
 
 # typescript-intl-cra
 
@@ -75,9 +74,9 @@ Options:
   -v, --version   Show version number                                  [boolean]
 
 Examples:
-  react-intl-cra 'src/App.js'                   One file.
-  react-intl-cra 'src/**/*.js'                  Pattern to specify files
-  react-intl-cra 'src/**/*.js' -o message.json  Output into a single file.
+  typescript-intl-cra 'src/App.js'                   One file.
+  typescript-intl-cra 'src/**/*.js'                  Pattern to specify files
+  typescript-intl-cra 'src/**/*.js' -o message.json  Output into a single file.
 
 
 For more information go to https://github.com/emoriarty/typescript-intl-cra
@@ -138,14 +137,14 @@ $ npm run changelog
 
 MIT: [http://michaelhsu.mit-license.org](http://michaelhsu.mit-license.org)
 
-[build-badge]: https://img.shields.io/travis/evenchange4/react-intl-cra/master.svg?style=flat-square
-[build]: https://travis-ci.org/evenchange4/react-intl-cra
-[npm-badge]: https://img.shields.io/npm/v/react-intl-cra.svg?style=flat-square
-[npm]: https://www.npmjs.org/package/react-intl-cra
-[codecov-badge]: https://img.shields.io/codecov/c/github/evenchange4/react-intl-cra.svg?style=flat-square
-[codecov]: https://codecov.io/github/evenchange4/react-intl-cra?branch=master
-[npm-downloads]: https://img.shields.io/npm/dt/react-intl-cra.svg?style=flat-square
-[license-badge]: https://img.shields.io/npm/l/react-intl-cra.svg?style=flat-square
+[build-badge]: https://img.shields.io/travis/emoriarty/typescript-intl-cra/master.svg?style=flat-square
+[build]: https://travis-ci.org/emoriarty/typescript-intl-cra
+[npm-badge]: https://img.shields.io/npm/v/typescript-intl-cra.svg?style=flat-square
+[npm]: https://www.npmjs.org/package/typescript-intl-cra
+[codecov-badge]: https://img.shields.io/codecov/c/github/emoriarty/typescript-intl-cra.svg?style=flat-square
+[codecov]: https://codecov.io/github/emoriarty/typescript-intl-cra?branch=master
+[npm-downloads]: https://img.shields.io/npm/dt/typescript-intl-cra.svg?style=flat-square
+[license-badge]: https://img.shields.io/npm/l/typescript-intl-cra.svg?style=flat-square
 [license]: http://michaelhsu.mit-license.org/
 [prettier-badge]: https://img.shields.io/badge/styled_with-prettier-ff69b4.svg?style=flat-square
 [prettier]: https://github.com/prettier/prettier
